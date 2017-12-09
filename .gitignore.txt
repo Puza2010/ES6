@@ -1,4 +1,4 @@
 /ES6_Task_1/node_modules/
 /ES6_Task_2/node_modules/
 /ES6_Task_3/node_modules/
-test
+test.txt
