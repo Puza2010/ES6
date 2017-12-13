@@ -1,8 +1,5 @@
 'use strict';
 
-//const sayHello = () => console.log('Hello world!');
-//sayHello();
-
 // Task 1 //
 var sayHello = function sayHello(x, y) {
     return console.log(x + ' ' + y);
@@ -23,25 +20,18 @@ var average = function average() {
         args[_key] = arguments[_key];
     }
 
-    return args.forEach(function (arg) {
-        return console.log(arg);
+    var summary = 0;
+
+    args.forEach(function (arg) {
+        summary += arg;
     });
+    console.log(summary / args.length);
 };
-average(5);
-
-var sum = 0;
-
-function logAllArguments() {
-    for (var i = 0; i < arguments.length; i++) {
-        sum += arguments[i];
-    }
-    console.log(sum / arguments.length);
-}
-
-logAllArguments(5, 5, 2);
+average(4, 4, 2);
 
 // Task 4 //
 var grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
+average.apply(undefined, [1, 1].concat(grades));
 
 // Task 5 //
 

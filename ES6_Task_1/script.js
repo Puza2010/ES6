@@ -1,6 +1,3 @@
-//const sayHello = () => console.log('Hello world!');
-//sayHello();
-
 // Task 1 //
 const sayHello = (x, y) => console.log(`${x} ${y}`);
 sayHello('Hello', 'World');
@@ -10,22 +7,19 @@ const multiply = (a = 1, b = 1) => console.log(a * b);
 multiply(5);
 
 // Task 3 //
-const average = (...args)=> args.forEach(arg => console.log(arg));
-average(5);
+const average = (...args) => {
+    let summary = 0;
 
-var sum = 0;
-
-function logAllArguments() {
-    for (var i=0; i < arguments.length; i++) {
-    	sum += arguments[i];
-    }
-    console.log(sum/arguments.length);
-}
-
-logAllArguments(5, 5, 2);
+    args.forEach(arg => {
+	summary += arg;
+    });
+    console.log(summary/args.length);
+};
+average(4,4,2);
 
 // Task 4 //
 const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
+average(1,1, ...grades);
 
 // Task 5 //
 
