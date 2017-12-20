@@ -32,8 +32,10 @@ class Stopwatch extends React.Component {
 	}
 
 	step() {
-		if (!this.running) return;
-			this.calculate();
+		if (!this.running) {
+			return;
+		}
+		this.calculate();
 	}
 
 	calculate() {
@@ -60,10 +62,9 @@ class Stopwatch extends React.Component {
 			<a href="#" className="button" id="start">Start</a>
 			<a href="#" className="button" id="stop">Stop</a>
 		</nav>
-		<div className="stopwatch"></div>
 		<p>{this.format()}</p>
 	}
 }
 
 var stopWatch = React.createElement(Stopwatch);
-ReactDOM.render(stopWatch, document.querySelector('.stopwatch'));
+ReactDOM.render(stopWatch, document.getElementById('.stopwatch'));
